@@ -49,7 +49,39 @@ def third_anagram(str1, str2)
 end
 
 #  Complexity
+#  Space O(n)     (2n on both)
+#  Time O(n)   n *log n
+#
+#
+
+
+def fourth_anagram?(str1, str2)
+  hash_1 = Hash.new(0)
+  hash_2 = Hash.new(0)
+
+  str1.chars.each { |char| hash_1[char] += 1 }
+  str2.chars.each { |char| hash_2[char] += 1 }
+
+  hash_2 == hash_1
+end
+
+#  Complexity
 #  Space O(1)
-#  Time O()
+#  Time O(n)
+#
+#
+
+def fourth_anagramv2?(str1, str2)
+  hash_1 = Hash.new(0)
+
+  str1.chars.each { |char| hash_1[char] += 1 }
+  str2.chars.each { |char| hash_1[char] -= 1 }
+
+  hash_1.values.all?{ |count| count == 0}
+end
+
+#  Complexity
+#  Space O(1)
+#  Time O(3n)
 #
 #
