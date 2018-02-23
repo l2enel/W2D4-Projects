@@ -15,7 +15,7 @@ def my_min(list)
 end
 # Complexity
 # Time O(n^2)
-# Space O(n^2)
+# Space O(1)
 #
 #
 
@@ -31,7 +31,7 @@ def my_min_v2(list)
 end
 # Complexity
 # Time O(n)
-# Space O(n)
+# Space O(1)
 #
 #
 
@@ -52,7 +52,7 @@ def largest_contiguous_subsum(arr_int)
 end
 # Complexity
 # Time O(n^3) - Once for idx1, once for idx2, once for map
-# Space O(n^2) - Once for pair_arr, once for mapped, could argue 1
+# Space O(n^3) - Once for pair_arr, once for mapped, could argue 1
 #
 #
 
